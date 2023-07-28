@@ -18,7 +18,7 @@
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="{% url 'frontpage' %}">
-          <img src="https://source.unsplash.com/random/900×700/?user" width="30px" height="200px">
+          <img src="https://source.unsplash.com/random/900×700/?login" width="30px" height="200px">
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -65,7 +65,7 @@
         <div class="container">
           <div class="columns is-centered">
           
-            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen" style="    width:34%!important;">
               <form method="POST" action="." class="box">
                 {% csrf_token %}
 
@@ -91,16 +91,16 @@
                   </div>
                 </div>  
 
-                <div class="field">
+                {% comment %} <div class="field">
                   <a href="{% url 'password_reset' %}">Forgot password ?</a> 
-                </div>
+                </div> {% endcomment %}
 
-                <div class="field">
+                <div class="field" style="display: flex; justify-content: center;">
                   <button class="button is-success" type="submit">
                     Login
                   </button>
                 </div>
-                <div class="field">
+                <div class="field" style="display: flex; justify-content: center;">
                   Need account ? <a href="{% url 'signup' %}">Signup</a> 
                 </div>
               </form>
